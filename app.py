@@ -1,6 +1,7 @@
 import streamlit as st 
 from ml import ml
 from PIL import Image
+from aboutme import aboutme
 
 def main():
     
@@ -10,7 +11,7 @@ def main():
     choice = st.sidebar.selectbox("Menu",menu)
 
     if choice == "Home":
-        img = Image.open("C:\\Users\\Gaurav\\Desktop\\heart.png")
+        img = Image.open("C:\\Users\\Gaurav\\Desktop\\streamlit peoject\\portfolio\\heart.png")
         
         st.header("Heart Attack Predication App")
         st.image(img)
@@ -24,10 +25,11 @@ def main():
         ml()
     
     elif choice == "About me ":
-        st.header("This is about me")
-        img = Image.open("C:\\Users\\Gaurav\\Desktop\\random\\aa.gif")
+        st.header("Gaurav poudel")
+        img = Image.open("C:\\Users\\Gaurav\\Desktop\\streamlit peoject\\portfolio\\aa.gif")
         st.image(img)
-
-        st.text("This is about me")
+        aboutme()
+        
+        
 
 main()
